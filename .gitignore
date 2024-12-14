@@ -1,0 +1,7 @@
+echo "node_modules
+.env
+.env.local
+build
+.DS_Store
+" > .gitignore
+node_modules

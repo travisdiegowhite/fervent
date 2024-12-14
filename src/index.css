@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Map container styles */
+.mapboxgl-map {
+  width: 100%;
+  height: 100%;
+}
+
+.mapboxgl-canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.mapboxgl-ctrl-top-right {
+  top: 1rem !important;
+  right: 1rem !important;
+}
+
+/* Fix control button styles */
+.mapboxgl-ctrl-group {
+  background-color: white !important;
+  border-radius: 0.5rem !important;
+  overflow: hidden;
+}
+
+.mapboxgl-ctrl-group button {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+/* Additional utility classes */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
