@@ -1,6 +1,6 @@
 // AIRouteSuggester.tsx
 import React, { useState } from "react";
-import { RoutePoint } from "./types";
+import { RoutePoint, RouteMetadata } from "./types";
 
 interface AIRouteSuggesterProps {
   onSuggestedRouteSelect: (points: RoutePoint[]) => void;

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SearchResult } from './types';
-import { useAuth } from '../../auth/AuthContext';
+
 
 interface HeaderProps {
   routeType: 'cycling' | 'walking';
@@ -24,9 +24,10 @@ const Header: React.FC<HeaderProps> = ({
   hasRoute
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
+  const user = { email: 'user@example.com' }; // Replace with actual user data
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [showSearchResults, setShowSearchResults] = useState(false);
-  const { user, signOut } = useAuth();
+  
 
   const handleSearch = async () => {
     if (!searchQuery.trim()) return;
@@ -39,6 +40,14 @@ const Header: React.FC<HeaderProps> = ({
     }
   };
 
+  function signOut(): void {
+    // Implement sign out logic here, for example, clearing user session and redirecting to login page
+    console.log('Signing out...');
+    // Clear user session (this is just an example, adjust according to your auth logic)
+    localStorage.removeItem('user');
+    // Redirect to login page
+    window.location.href = '/login';
+  }
   return (
     <div className="flex justify-between p-4 bg-white border-b z-20 relative">
       <div className="flex-1">

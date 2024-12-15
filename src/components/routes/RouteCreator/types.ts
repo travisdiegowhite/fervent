@@ -57,3 +57,21 @@ export interface SaveStatus {
   loading: boolean;
   error: string | null;
 }
+
+export interface RoutePoint {
+
+  // Define the properties of RoutePoint here
+
+}
+
+
+
+export interface RouteMetadata {
+
+  scenicScore: number;
+
+  difficultyScore: number;
+
+  safetyNotes?: string[];
+
+}
